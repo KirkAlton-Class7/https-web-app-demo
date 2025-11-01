@@ -46,7 +46,7 @@ resource "aws_instance" "bastion_host" {
     #associate_public_ip_address = true
 
   tags = {
-    Name = "Bastion-Host"
+    Name = "Bastion-Host-Windows"
   }
 }
 
@@ -55,7 +55,7 @@ resource "aws_instance" "public_client_a" {
     ami           = data.aws_ami.amazon_linux_2023.id
     instance_type = "t3.micro"
     subnet_id     = aws_subnet.public_app_a.id
-    vpc_security_group_ids = [aws_security_group.private_app.id]
+    vpc_security_group_ids = [aws_security_group.public_app.id]
     #key_name = "osaka-key"  # Replace with your key pair name
     user_data = file("${path.module}/public_client_a_script.sh") # Custom script path for Public Client A
     #associate_public_ip_address = true
