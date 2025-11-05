@@ -43,15 +43,54 @@ resource "aws_vpc_security_group_ingress_rule" "allow_all_inbound_ssh_ipv4" {
   to_port           = 22
 }
 
-# SG Rule: Allow RDP Inbound from Authorized IPv4 Addresses for Public App SG
+
+
+# Bastion Host Security Group
+resource "aws_security_group" "bastion_host" {
+  name        = "bastion_host_sg"
+  description = "Allow RDP access from authorized IPs"
+  vpc_id      = aws_vpc.main.id
+
+  tags = {
+    Name = "bastion-host-sg"
+  }
+}
+
+
+# SG Rule: Allow all HTTP Inbound for Bastion Host SG
+resource "aws_vpc_security_group_ingress_rule" "allow_all_inbound_http_ipv4_bastion" {
+  security_group_id = aws_security_group.bastion_host.id
+  cidr_ipv4         = "0.0.0.0/0"
+  from_port         = 80
+  ip_protocol       = "tcp"
+  to_port           = 80
+}
+
+# SG Rule: Allow all HTTPS Inbound for Bastion Host SG
+resource "aws_vpc_security_group_ingress_rule" "allow_all_inbound_https_ipv4_bastion" {
+  security_group_id = aws_security_group.bastion_host.id
+  cidr_ipv4         = "0.0.0.0/0"
+  from_port         = 443
+  ip_protocol       = "tcp"
+  to_port           = 443
+}
+
+# SG Rule: Allow all HTTP Outbound for Bastion Host SG
+resource "aws_vpc_security_group_egress_rule" "allow_all_outbound_ipv4_bastion" {
+  security_group_id = aws_security_group.bastion_host.id
+  cidr_ipv4         = "0.0.0.0/0"
+  ip_protocol       = "-1" # semantically equivalent to all ports
+}
+
+
+# SG Rule: Allow RDP Inbound from Authorized IPv4 Addresses for Bastion Host SG
 resource "aws_vpc_security_group_ingress_rule" "allow_all_inbound_rdp_ipv4" {
-  security_group_id = aws_security_group.public_app.id
+  security_group_id = aws_security_group.bastion_host.id
   cidr_ipv4         = "73.166.82.125/32"  # Replace with your your authorized IP address
   from_port         = 3389
   ip_protocol       = "tcp"
   to_port           = 3389
 }
-
 
 
 

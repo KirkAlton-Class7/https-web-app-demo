@@ -41,7 +41,7 @@ resource "aws_instance" "bastion_host" {
     ami           = data.aws_ami.microsoft_windows_server_2025.id
     instance_type = "t3.micro"
     subnet_id     = aws_subnet.public_app_a.id
-    vpc_security_group_ids = [aws_security_group.public_app.id]
+    vpc_security_group_ids = [aws_security_group.bastion_host.id]
     #key_name = "osaka-key"  # Replace with your key pair name
     associate_public_ip_address = true
 
