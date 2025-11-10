@@ -1,5 +1,6 @@
 # Application Load Balancer (ALB) Configurations
 
+# Public Application Load Balancer 01
 resource "aws_lb" "public_app_lb_01" {
   name               = "public-app-lb-01"
   internal           = false
@@ -22,7 +23,7 @@ resource "aws_lb" "public_app_lb_01" {
 }
 
 
-# AWS Load Balancer Listener (Forwards to Mixed ASG)
+# Public Application Load Balancer 01 - Listener (Forwards to Mixed ASG)
 
 resource "aws_lb_listener" "public_app_lb_01" {
   load_balancer_arn = aws_lb.public_app_lb_01.arn
