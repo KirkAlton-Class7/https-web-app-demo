@@ -1,0 +1,443 @@
+digraph {
+	compound = "true"
+	newrank = "true"
+	subgraph "root" {
+		"[root] aws_autoscaling_group.private_client_mixed_asg" [label = "aws_autoscaling_group.private_client_mixed_asg", shape = "box"]
+		"[root] aws_autoscaling_group.private_client_mixed_asg (expand)" [label = "aws_autoscaling_group.private_client_mixed_asg", shape = "box"]
+		"[root] aws_eip.main" [label = "aws_eip.main", shape = "box"]
+		"[root] aws_eip.main (expand)" [label = "aws_eip.main", shape = "box"]
+		"[root] aws_instance.bastion_host" [label = "aws_instance.bastion_host", shape = "box"]
+		"[root] aws_instance.bastion_host (expand)" [label = "aws_instance.bastion_host", shape = "box"]
+		"[root] aws_instance.private_client_a" [label = "aws_instance.private_client_a", shape = "box"]
+		"[root] aws_instance.private_client_a (expand)" [label = "aws_instance.private_client_a", shape = "box"]
+		"[root] aws_instance.private_client_b" [label = "aws_instance.private_client_b", shape = "box"]
+		"[root] aws_instance.private_client_b (expand)" [label = "aws_instance.private_client_b", shape = "box"]
+		"[root] aws_instance.private_client_c" [label = "aws_instance.private_client_c", shape = "box"]
+		"[root] aws_instance.private_client_c (expand)" [label = "aws_instance.private_client_c", shape = "box"]
+		"[root] aws_instance.public_client_a" [label = "aws_instance.public_client_a", shape = "box"]
+		"[root] aws_instance.public_client_a (expand)" [label = "aws_instance.public_client_a", shape = "box"]
+		"[root] aws_internet_gateway.main" [label = "aws_internet_gateway.main", shape = "box"]
+		"[root] aws_internet_gateway.main (expand)" [label = "aws_internet_gateway.main", shape = "box"]
+		"[root] aws_launch_template.private_client_a_asg" [label = "aws_launch_template.private_client_a_asg", shape = "box"]
+		"[root] aws_launch_template.private_client_a_asg (expand)" [label = "aws_launch_template.private_client_a_asg", shape = "box"]
+		"[root] aws_launch_template.private_client_b_asg" [label = "aws_launch_template.private_client_b_asg", shape = "box"]
+		"[root] aws_launch_template.private_client_b_asg (expand)" [label = "aws_launch_template.private_client_b_asg", shape = "box"]
+		"[root] aws_launch_template.private_client_c_asg" [label = "aws_launch_template.private_client_c_asg", shape = "box"]
+		"[root] aws_launch_template.private_client_c_asg (expand)" [label = "aws_launch_template.private_client_c_asg", shape = "box"]
+		"[root] aws_lb.public_app_lb_01" [label = "aws_lb.public_app_lb_01", shape = "box"]
+		"[root] aws_lb.public_app_lb_01 (expand)" [label = "aws_lb.public_app_lb_01", shape = "box"]
+		"[root] aws_lb_listener.public_app_lb_01" [label = "aws_lb_listener.public_app_lb_01", shape = "box"]
+		"[root] aws_lb_listener.public_app_lb_01 (expand)" [label = "aws_lb_listener.public_app_lb_01", shape = "box"]
+		"[root] aws_lb_target_group.private_mixed_asg_tg" [label = "aws_lb_target_group.private_mixed_asg_tg", shape = "box"]
+		"[root] aws_lb_target_group.private_mixed_asg_tg (expand)" [label = "aws_lb_target_group.private_mixed_asg_tg", shape = "box"]
+		"[root] aws_nat_gateway.main" [label = "aws_nat_gateway.main", shape = "box"]
+		"[root] aws_nat_gateway.main (expand)" [label = "aws_nat_gateway.main", shape = "box"]
+		"[root] aws_route_table.local" [label = "aws_route_table.local", shape = "box"]
+		"[root] aws_route_table.local (expand)" [label = "aws_route_table.local", shape = "box"]
+		"[root] aws_route_table.private" [label = "aws_route_table.private", shape = "box"]
+		"[root] aws_route_table.private (expand)" [label = "aws_route_table.private", shape = "box"]
+		"[root] aws_route_table.public" [label = "aws_route_table.public", shape = "box"]
+		"[root] aws_route_table.public (expand)" [label = "aws_route_table.public", shape = "box"]
+		"[root] aws_route_table_association.private_app_a" [label = "aws_route_table_association.private_app_a", shape = "box"]
+		"[root] aws_route_table_association.private_app_a (expand)" [label = "aws_route_table_association.private_app_a", shape = "box"]
+		"[root] aws_route_table_association.private_app_b" [label = "aws_route_table_association.private_app_b", shape = "box"]
+		"[root] aws_route_table_association.private_app_b (expand)" [label = "aws_route_table_association.private_app_b", shape = "box"]
+		"[root] aws_route_table_association.private_app_c" [label = "aws_route_table_association.private_app_c", shape = "box"]
+		"[root] aws_route_table_association.private_app_c (expand)" [label = "aws_route_table_association.private_app_c", shape = "box"]
+		"[root] aws_route_table_association.private_data_a" [label = "aws_route_table_association.private_data_a", shape = "box"]
+		"[root] aws_route_table_association.private_data_a (expand)" [label = "aws_route_table_association.private_data_a", shape = "box"]
+		"[root] aws_route_table_association.private_data_b" [label = "aws_route_table_association.private_data_b", shape = "box"]
+		"[root] aws_route_table_association.private_data_b (expand)" [label = "aws_route_table_association.private_data_b", shape = "box"]
+		"[root] aws_route_table_association.private_data_c" [label = "aws_route_table_association.private_data_c", shape = "box"]
+		"[root] aws_route_table_association.private_data_c (expand)" [label = "aws_route_table_association.private_data_c", shape = "box"]
+		"[root] aws_route_table_association.public_app_a" [label = "aws_route_table_association.public_app_a", shape = "box"]
+		"[root] aws_route_table_association.public_app_a (expand)" [label = "aws_route_table_association.public_app_a", shape = "box"]
+		"[root] aws_route_table_association.public_app_b" [label = "aws_route_table_association.public_app_b", shape = "box"]
+		"[root] aws_route_table_association.public_app_b (expand)" [label = "aws_route_table_association.public_app_b", shape = "box"]
+		"[root] aws_route_table_association.public_app_c" [label = "aws_route_table_association.public_app_c", shape = "box"]
+		"[root] aws_route_table_association.public_app_c (expand)" [label = "aws_route_table_association.public_app_c", shape = "box"]
+		"[root] aws_security_group.bastion_host" [label = "aws_security_group.bastion_host", shape = "box"]
+		"[root] aws_security_group.bastion_host (expand)" [label = "aws_security_group.bastion_host", shape = "box"]
+		"[root] aws_security_group.private_app" [label = "aws_security_group.private_app", shape = "box"]
+		"[root] aws_security_group.private_app (expand)" [label = "aws_security_group.private_app", shape = "box"]
+		"[root] aws_security_group.private_asg" [label = "aws_security_group.private_asg", shape = "box"]
+		"[root] aws_security_group.private_asg (expand)" [label = "aws_security_group.private_asg", shape = "box"]
+		"[root] aws_security_group.private_data_mongodb" [label = "aws_security_group.private_data_mongodb", shape = "box"]
+		"[root] aws_security_group.private_data_mongodb (expand)" [label = "aws_security_group.private_data_mongodb", shape = "box"]
+		"[root] aws_security_group.private_data_mssql" [label = "aws_security_group.private_data_mssql", shape = "box"]
+		"[root] aws_security_group.private_data_mssql (expand)" [label = "aws_security_group.private_data_mssql", shape = "box"]
+		"[root] aws_security_group.private_data_mysql" [label = "aws_security_group.private_data_mysql", shape = "box"]
+		"[root] aws_security_group.private_data_mysql (expand)" [label = "aws_security_group.private_data_mysql", shape = "box"]
+		"[root] aws_security_group.private_data_oracle" [label = "aws_security_group.private_data_oracle", shape = "box"]
+		"[root] aws_security_group.private_data_oracle (expand)" [label = "aws_security_group.private_data_oracle", shape = "box"]
+		"[root] aws_security_group.private_data_postgresql" [label = "aws_security_group.private_data_postgresql", shape = "box"]
+		"[root] aws_security_group.private_data_postgresql (expand)" [label = "aws_security_group.private_data_postgresql", shape = "box"]
+		"[root] aws_security_group.private_data_redis" [label = "aws_security_group.private_data_redis", shape = "box"]
+		"[root] aws_security_group.private_data_redis (expand)" [label = "aws_security_group.private_data_redis", shape = "box"]
+		"[root] aws_security_group.public_alb" [label = "aws_security_group.public_alb", shape = "box"]
+		"[root] aws_security_group.public_alb (expand)" [label = "aws_security_group.public_alb", shape = "box"]
+		"[root] aws_security_group.public_app" [label = "aws_security_group.public_app", shape = "box"]
+		"[root] aws_security_group.public_app (expand)" [label = "aws_security_group.public_app", shape = "box"]
+		"[root] aws_subnet.private_app_a" [label = "aws_subnet.private_app_a", shape = "box"]
+		"[root] aws_subnet.private_app_a (expand)" [label = "aws_subnet.private_app_a", shape = "box"]
+		"[root] aws_subnet.private_app_b" [label = "aws_subnet.private_app_b", shape = "box"]
+		"[root] aws_subnet.private_app_b (expand)" [label = "aws_subnet.private_app_b", shape = "box"]
+		"[root] aws_subnet.private_app_c" [label = "aws_subnet.private_app_c", shape = "box"]
+		"[root] aws_subnet.private_app_c (expand)" [label = "aws_subnet.private_app_c", shape = "box"]
+		"[root] aws_subnet.private_data_a" [label = "aws_subnet.private_data_a", shape = "box"]
+		"[root] aws_subnet.private_data_a (expand)" [label = "aws_subnet.private_data_a", shape = "box"]
+		"[root] aws_subnet.private_data_b" [label = "aws_subnet.private_data_b", shape = "box"]
+		"[root] aws_subnet.private_data_b (expand)" [label = "aws_subnet.private_data_b", shape = "box"]
+		"[root] aws_subnet.private_data_c" [label = "aws_subnet.private_data_c", shape = "box"]
+		"[root] aws_subnet.private_data_c (expand)" [label = "aws_subnet.private_data_c", shape = "box"]
+		"[root] aws_subnet.public_app_a" [label = "aws_subnet.public_app_a", shape = "box"]
+		"[root] aws_subnet.public_app_a (expand)" [label = "aws_subnet.public_app_a", shape = "box"]
+		"[root] aws_subnet.public_app_b" [label = "aws_subnet.public_app_b", shape = "box"]
+		"[root] aws_subnet.public_app_b (expand)" [label = "aws_subnet.public_app_b", shape = "box"]
+		"[root] aws_subnet.public_app_c" [label = "aws_subnet.public_app_c", shape = "box"]
+		"[root] aws_subnet.public_app_c (expand)" [label = "aws_subnet.public_app_c", shape = "box"]
+		"[root] aws_vpc.main" [label = "aws_vpc.main", shape = "box"]
+		"[root] aws_vpc.main (expand)" [label = "aws_vpc.main", shape = "box"]
+		"[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_bastion" [label = "aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_bastion", shape = "box"]
+		"[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_bastion (expand)" [label = "aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_bastion", shape = "box"]
+		"[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_private_app" [label = "aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_private_app", shape = "box"]
+		"[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_private_app (expand)" [label = "aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_private_app", shape = "box"]
+		"[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_private_asg" [label = "aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_private_asg", shape = "box"]
+		"[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_private_asg (expand)" [label = "aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_private_asg", shape = "box"]
+		"[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_public_alb" [label = "aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_public_alb", shape = "box"]
+		"[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_public_alb (expand)" [label = "aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_public_alb", shape = "box"]
+		"[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_public_app" [label = "aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_public_app", shape = "box"]
+		"[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_public_app (expand)" [label = "aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_public_app", shape = "box"]
+		"[root] aws_vpc_security_group_egress_rule.allow_internal_outbound_ipv4_mongodb" [label = "aws_vpc_security_group_egress_rule.allow_internal_outbound_ipv4_mongodb", shape = "box"]
+		"[root] aws_vpc_security_group_egress_rule.allow_internal_outbound_ipv4_mongodb (expand)" [label = "aws_vpc_security_group_egress_rule.allow_internal_outbound_ipv4_mongodb", shape = "box"]
+		"[root] aws_vpc_security_group_egress_rule.allow_internal_outbound_ipv4_mssql" [label = "aws_vpc_security_group_egress_rule.allow_internal_outbound_ipv4_mssql", shape = "box"]
+		"[root] aws_vpc_security_group_egress_rule.allow_internal_outbound_ipv4_mssql (expand)" [label = "aws_vpc_security_group_egress_rule.allow_internal_outbound_ipv4_mssql", shape = "box"]
+		"[root] aws_vpc_security_group_egress_rule.allow_internal_outbound_ipv4_mysql" [label = "aws_vpc_security_group_egress_rule.allow_internal_outbound_ipv4_mysql", shape = "box"]
+		"[root] aws_vpc_security_group_egress_rule.allow_internal_outbound_ipv4_mysql (expand)" [label = "aws_vpc_security_group_egress_rule.allow_internal_outbound_ipv4_mysql", shape = "box"]
+		"[root] aws_vpc_security_group_egress_rule.allow_internal_outbound_ipv4_oracle" [label = "aws_vpc_security_group_egress_rule.allow_internal_outbound_ipv4_oracle", shape = "box"]
+		"[root] aws_vpc_security_group_egress_rule.allow_internal_outbound_ipv4_oracle (expand)" [label = "aws_vpc_security_group_egress_rule.allow_internal_outbound_ipv4_oracle", shape = "box"]
+		"[root] aws_vpc_security_group_egress_rule.allow_internal_outbound_ipv4_postgresql" [label = "aws_vpc_security_group_egress_rule.allow_internal_outbound_ipv4_postgresql", shape = "box"]
+		"[root] aws_vpc_security_group_egress_rule.allow_internal_outbound_ipv4_postgresql (expand)" [label = "aws_vpc_security_group_egress_rule.allow_internal_outbound_ipv4_postgresql", shape = "box"]
+		"[root] aws_vpc_security_group_egress_rule.allow_internal_outbound_ipv4_redis" [label = "aws_vpc_security_group_egress_rule.allow_internal_outbound_ipv4_redis", shape = "box"]
+		"[root] aws_vpc_security_group_egress_rule.allow_internal_outbound_ipv4_redis (expand)" [label = "aws_vpc_security_group_egress_rule.allow_internal_outbound_ipv4_redis", shape = "box"]
+		"[root] aws_vpc_security_group_ingress_rule.allow_all_inbound_http_ipv4_public_alb" [label = "aws_vpc_security_group_ingress_rule.allow_all_inbound_http_ipv4_public_alb", shape = "box"]
+		"[root] aws_vpc_security_group_ingress_rule.allow_all_inbound_http_ipv4_public_alb (expand)" [label = "aws_vpc_security_group_ingress_rule.allow_all_inbound_http_ipv4_public_alb", shape = "box"]
+		"[root] aws_vpc_security_group_ingress_rule.allow_all_inbound_http_ipv4_public_app" [label = "aws_vpc_security_group_ingress_rule.allow_all_inbound_http_ipv4_public_app", shape = "box"]
+		"[root] aws_vpc_security_group_ingress_rule.allow_all_inbound_http_ipv4_public_app (expand)" [label = "aws_vpc_security_group_ingress_rule.allow_all_inbound_http_ipv4_public_app", shape = "box"]
+		"[root] aws_vpc_security_group_ingress_rule.allow_all_inbound_https_ipv4_public_alb" [label = "aws_vpc_security_group_ingress_rule.allow_all_inbound_https_ipv4_public_alb", shape = "box"]
+		"[root] aws_vpc_security_group_ingress_rule.allow_all_inbound_https_ipv4_public_alb (expand)" [label = "aws_vpc_security_group_ingress_rule.allow_all_inbound_https_ipv4_public_alb", shape = "box"]
+		"[root] aws_vpc_security_group_ingress_rule.allow_all_inbound_https_ipv4_public_app" [label = "aws_vpc_security_group_ingress_rule.allow_all_inbound_https_ipv4_public_app", shape = "box"]
+		"[root] aws_vpc_security_group_ingress_rule.allow_all_inbound_https_ipv4_public_app (expand)" [label = "aws_vpc_security_group_ingress_rule.allow_all_inbound_https_ipv4_public_app", shape = "box"]
+		"[root] aws_vpc_security_group_ingress_rule.allow_all_inbound_rdp_ipv4_bastion" [label = "aws_vpc_security_group_ingress_rule.allow_all_inbound_rdp_ipv4_bastion", shape = "box"]
+		"[root] aws_vpc_security_group_ingress_rule.allow_all_inbound_rdp_ipv4_bastion (expand)" [label = "aws_vpc_security_group_ingress_rule.allow_all_inbound_rdp_ipv4_bastion", shape = "box"]
+		"[root] aws_vpc_security_group_ingress_rule.allow_all_inbound_ssh_ipv4_public_app" [label = "aws_vpc_security_group_ingress_rule.allow_all_inbound_ssh_ipv4_public_app", shape = "box"]
+		"[root] aws_vpc_security_group_ingress_rule.allow_all_inbound_ssh_ipv4_public_app (expand)" [label = "aws_vpc_security_group_ingress_rule.allow_all_inbound_ssh_ipv4_public_app", shape = "box"]
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_http_from_public_alb_sg" [label = "aws_vpc_security_group_ingress_rule.allow_inbound_http_from_public_alb_sg", shape = "box"]
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_http_from_public_alb_sg (expand)" [label = "aws_vpc_security_group_ingress_rule.allow_inbound_http_from_public_alb_sg", shape = "box"]
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_http_from_public_app_sg" [label = "aws_vpc_security_group_ingress_rule.allow_inbound_http_from_public_app_sg", shape = "box"]
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_http_from_public_app_sg (expand)" [label = "aws_vpc_security_group_ingress_rule.allow_inbound_http_from_public_app_sg", shape = "box"]
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_https_from_public_alb_sg" [label = "aws_vpc_security_group_ingress_rule.allow_inbound_https_from_public_alb_sg", shape = "box"]
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_https_from_public_alb_sg (expand)" [label = "aws_vpc_security_group_ingress_rule.allow_inbound_https_from_public_alb_sg", shape = "box"]
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_https_from_public_app_sg" [label = "aws_vpc_security_group_ingress_rule.allow_inbound_https_from_public_app_sg", shape = "box"]
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_https_from_public_app_sg (expand)" [label = "aws_vpc_security_group_ingress_rule.allow_inbound_https_from_public_app_sg", shape = "box"]
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_mongodb_from_private_app_sg" [label = "aws_vpc_security_group_ingress_rule.allow_inbound_mongodb_from_private_app_sg", shape = "box"]
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_mongodb_from_private_app_sg (expand)" [label = "aws_vpc_security_group_ingress_rule.allow_inbound_mongodb_from_private_app_sg", shape = "box"]
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_mssql_from_private_app_sg" [label = "aws_vpc_security_group_ingress_rule.allow_inbound_mssql_from_private_app_sg", shape = "box"]
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_mssql_from_private_app_sg (expand)" [label = "aws_vpc_security_group_ingress_rule.allow_inbound_mssql_from_private_app_sg", shape = "box"]
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_mysql_from_private_app_sg" [label = "aws_vpc_security_group_ingress_rule.allow_inbound_mysql_from_private_app_sg", shape = "box"]
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_mysql_from_private_app_sg (expand)" [label = "aws_vpc_security_group_ingress_rule.allow_inbound_mysql_from_private_app_sg", shape = "box"]
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_oracle_from_private_app_sg" [label = "aws_vpc_security_group_ingress_rule.allow_inbound_oracle_from_private_app_sg", shape = "box"]
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_oracle_from_private_app_sg (expand)" [label = "aws_vpc_security_group_ingress_rule.allow_inbound_oracle_from_private_app_sg", shape = "box"]
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_postgresql_from_private_app_sg" [label = "aws_vpc_security_group_ingress_rule.allow_inbound_postgresql_from_private_app_sg", shape = "box"]
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_postgresql_from_private_app_sg (expand)" [label = "aws_vpc_security_group_ingress_rule.allow_inbound_postgresql_from_private_app_sg", shape = "box"]
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_redis_from_private_app_sg" [label = "aws_vpc_security_group_ingress_rule.allow_inbound_redis_from_private_app_sg", shape = "box"]
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_redis_from_private_app_sg (expand)" [label = "aws_vpc_security_group_ingress_rule.allow_inbound_redis_from_private_app_sg", shape = "box"]
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_ssh_from_public_app_sg" [label = "aws_vpc_security_group_ingress_rule.allow_inbound_ssh_from_public_app_sg", shape = "box"]
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_ssh_from_public_app_sg (expand)" [label = "aws_vpc_security_group_ingress_rule.allow_inbound_ssh_from_public_app_sg", shape = "box"]
+		"[root] data.aws_ami.amazon_linux_2023 (expand)" [label = "data.aws_ami.amazon_linux_2023", shape = "box"]
+		"[root] data.aws_ami.microsoft_windows_server_2025 (expand)" [label = "data.aws_ami.microsoft_windows_server_2025", shape = "box"]
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"]" [label = "provider[\"registry.terraform.io/hashicorp/aws\"]", shape = "diamond"]
+		"[root] aws_autoscaling_group.private_client_mixed_asg (expand)" -> "[root] aws_launch_template.private_client_a_asg"
+		"[root] aws_autoscaling_group.private_client_mixed_asg (expand)" -> "[root] aws_launch_template.private_client_b_asg"
+		"[root] aws_autoscaling_group.private_client_mixed_asg (expand)" -> "[root] aws_launch_template.private_client_c_asg"
+		"[root] aws_autoscaling_group.private_client_mixed_asg (expand)" -> "[root] aws_lb_target_group.private_mixed_asg_tg"
+		"[root] aws_autoscaling_group.private_client_mixed_asg (expand)" -> "[root] aws_subnet.private_app_a"
+		"[root] aws_autoscaling_group.private_client_mixed_asg (expand)" -> "[root] aws_subnet.private_app_b"
+		"[root] aws_autoscaling_group.private_client_mixed_asg (expand)" -> "[root] aws_subnet.private_app_c"
+		"[root] aws_autoscaling_group.private_client_mixed_asg" -> "[root] aws_autoscaling_group.private_client_mixed_asg (expand)"
+		"[root] aws_eip.main (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_eip.main" -> "[root] aws_eip.main (expand)"
+		"[root] aws_instance.bastion_host (expand)" -> "[root] aws_security_group.bastion_host"
+		"[root] aws_instance.bastion_host (expand)" -> "[root] aws_subnet.public_app_a"
+		"[root] aws_instance.bastion_host (expand)" -> "[root] data.aws_ami.microsoft_windows_server_2025 (expand)"
+		"[root] aws_instance.bastion_host" -> "[root] aws_instance.bastion_host (expand)"
+		"[root] aws_instance.private_client_a (expand)" -> "[root] aws_security_group.private_app"
+		"[root] aws_instance.private_client_a (expand)" -> "[root] aws_subnet.private_app_a"
+		"[root] aws_instance.private_client_a (expand)" -> "[root] data.aws_ami.amazon_linux_2023 (expand)"
+		"[root] aws_instance.private_client_a" -> "[root] aws_instance.private_client_a (expand)"
+		"[root] aws_instance.private_client_b (expand)" -> "[root] aws_security_group.private_app"
+		"[root] aws_instance.private_client_b (expand)" -> "[root] aws_subnet.private_app_b"
+		"[root] aws_instance.private_client_b (expand)" -> "[root] data.aws_ami.amazon_linux_2023 (expand)"
+		"[root] aws_instance.private_client_b" -> "[root] aws_instance.private_client_b (expand)"
+		"[root] aws_instance.private_client_c (expand)" -> "[root] aws_security_group.private_app"
+		"[root] aws_instance.private_client_c (expand)" -> "[root] aws_subnet.private_app_c"
+		"[root] aws_instance.private_client_c (expand)" -> "[root] data.aws_ami.amazon_linux_2023 (expand)"
+		"[root] aws_instance.private_client_c" -> "[root] aws_instance.private_client_c (expand)"
+		"[root] aws_instance.public_client_a (expand)" -> "[root] aws_security_group.public_app"
+		"[root] aws_instance.public_client_a (expand)" -> "[root] aws_subnet.public_app_a"
+		"[root] aws_instance.public_client_a (expand)" -> "[root] data.aws_ami.amazon_linux_2023 (expand)"
+		"[root] aws_instance.public_client_a" -> "[root] aws_instance.public_client_a (expand)"
+		"[root] aws_internet_gateway.main (expand)" -> "[root] aws_vpc.main"
+		"[root] aws_internet_gateway.main" -> "[root] aws_internet_gateway.main (expand)"
+		"[root] aws_launch_template.private_client_a_asg (expand)" -> "[root] aws_security_group.private_asg"
+		"[root] aws_launch_template.private_client_a_asg (expand)" -> "[root] data.aws_ami.amazon_linux_2023 (expand)"
+		"[root] aws_launch_template.private_client_a_asg" -> "[root] aws_launch_template.private_client_a_asg (expand)"
+		"[root] aws_launch_template.private_client_b_asg (expand)" -> "[root] aws_security_group.private_asg"
+		"[root] aws_launch_template.private_client_b_asg (expand)" -> "[root] data.aws_ami.amazon_linux_2023 (expand)"
+		"[root] aws_launch_template.private_client_b_asg" -> "[root] aws_launch_template.private_client_b_asg (expand)"
+		"[root] aws_launch_template.private_client_c_asg (expand)" -> "[root] aws_security_group.private_asg"
+		"[root] aws_launch_template.private_client_c_asg (expand)" -> "[root] data.aws_ami.amazon_linux_2023 (expand)"
+		"[root] aws_launch_template.private_client_c_asg" -> "[root] aws_launch_template.private_client_c_asg (expand)"
+		"[root] aws_lb.public_app_lb_01 (expand)" -> "[root] aws_security_group.public_alb"
+		"[root] aws_lb.public_app_lb_01 (expand)" -> "[root] aws_subnet.public_app_a"
+		"[root] aws_lb.public_app_lb_01 (expand)" -> "[root] aws_subnet.public_app_b"
+		"[root] aws_lb.public_app_lb_01 (expand)" -> "[root] aws_subnet.public_app_c"
+		"[root] aws_lb.public_app_lb_01" -> "[root] aws_lb.public_app_lb_01 (expand)"
+		"[root] aws_lb_listener.public_app_lb_01 (expand)" -> "[root] aws_lb.public_app_lb_01"
+		"[root] aws_lb_listener.public_app_lb_01 (expand)" -> "[root] aws_lb_target_group.private_mixed_asg_tg"
+		"[root] aws_lb_listener.public_app_lb_01" -> "[root] aws_lb_listener.public_app_lb_01 (expand)"
+		"[root] aws_lb_target_group.private_mixed_asg_tg (expand)" -> "[root] aws_vpc.main"
+		"[root] aws_lb_target_group.private_mixed_asg_tg" -> "[root] aws_lb_target_group.private_mixed_asg_tg (expand)"
+		"[root] aws_nat_gateway.main (expand)" -> "[root] aws_eip.main"
+		"[root] aws_nat_gateway.main (expand)" -> "[root] aws_internet_gateway.main"
+		"[root] aws_nat_gateway.main (expand)" -> "[root] aws_subnet.public_app_c"
+		"[root] aws_nat_gateway.main" -> "[root] aws_nat_gateway.main (expand)"
+		"[root] aws_route_table.local (expand)" -> "[root] aws_vpc.main"
+		"[root] aws_route_table.local" -> "[root] aws_route_table.local (expand)"
+		"[root] aws_route_table.private (expand)" -> "[root] aws_nat_gateway.main"
+		"[root] aws_route_table.private" -> "[root] aws_route_table.private (expand)"
+		"[root] aws_route_table.public (expand)" -> "[root] aws_internet_gateway.main"
+		"[root] aws_route_table.public" -> "[root] aws_route_table.public (expand)"
+		"[root] aws_route_table_association.private_app_a (expand)" -> "[root] aws_route_table.private"
+		"[root] aws_route_table_association.private_app_a (expand)" -> "[root] aws_subnet.private_app_a"
+		"[root] aws_route_table_association.private_app_a" -> "[root] aws_route_table_association.private_app_a (expand)"
+		"[root] aws_route_table_association.private_app_b (expand)" -> "[root] aws_route_table.private"
+		"[root] aws_route_table_association.private_app_b (expand)" -> "[root] aws_subnet.private_app_b"
+		"[root] aws_route_table_association.private_app_b" -> "[root] aws_route_table_association.private_app_b (expand)"
+		"[root] aws_route_table_association.private_app_c (expand)" -> "[root] aws_route_table.private"
+		"[root] aws_route_table_association.private_app_c (expand)" -> "[root] aws_subnet.private_app_c"
+		"[root] aws_route_table_association.private_app_c" -> "[root] aws_route_table_association.private_app_c (expand)"
+		"[root] aws_route_table_association.private_data_a (expand)" -> "[root] aws_route_table.local"
+		"[root] aws_route_table_association.private_data_a (expand)" -> "[root] aws_subnet.private_data_a"
+		"[root] aws_route_table_association.private_data_a" -> "[root] aws_route_table_association.private_data_a (expand)"
+		"[root] aws_route_table_association.private_data_b (expand)" -> "[root] aws_route_table.local"
+		"[root] aws_route_table_association.private_data_b (expand)" -> "[root] aws_subnet.private_data_b"
+		"[root] aws_route_table_association.private_data_b" -> "[root] aws_route_table_association.private_data_b (expand)"
+		"[root] aws_route_table_association.private_data_c (expand)" -> "[root] aws_route_table.local"
+		"[root] aws_route_table_association.private_data_c (expand)" -> "[root] aws_subnet.private_data_c"
+		"[root] aws_route_table_association.private_data_c" -> "[root] aws_route_table_association.private_data_c (expand)"
+		"[root] aws_route_table_association.public_app_a (expand)" -> "[root] aws_route_table.public"
+		"[root] aws_route_table_association.public_app_a (expand)" -> "[root] aws_subnet.public_app_a"
+		"[root] aws_route_table_association.public_app_a" -> "[root] aws_route_table_association.public_app_a (expand)"
+		"[root] aws_route_table_association.public_app_b (expand)" -> "[root] aws_route_table.public"
+		"[root] aws_route_table_association.public_app_b (expand)" -> "[root] aws_subnet.public_app_b"
+		"[root] aws_route_table_association.public_app_b" -> "[root] aws_route_table_association.public_app_b (expand)"
+		"[root] aws_route_table_association.public_app_c (expand)" -> "[root] aws_route_table.public"
+		"[root] aws_route_table_association.public_app_c (expand)" -> "[root] aws_subnet.public_app_c"
+		"[root] aws_route_table_association.public_app_c" -> "[root] aws_route_table_association.public_app_c (expand)"
+		"[root] aws_security_group.bastion_host (expand)" -> "[root] aws_vpc.main"
+		"[root] aws_security_group.bastion_host" -> "[root] aws_security_group.bastion_host (expand)"
+		"[root] aws_security_group.private_app (expand)" -> "[root] aws_vpc.main"
+		"[root] aws_security_group.private_app" -> "[root] aws_security_group.private_app (expand)"
+		"[root] aws_security_group.private_asg (expand)" -> "[root] aws_vpc.main"
+		"[root] aws_security_group.private_asg" -> "[root] aws_security_group.private_asg (expand)"
+		"[root] aws_security_group.private_data_mongodb (expand)" -> "[root] aws_vpc.main"
+		"[root] aws_security_group.private_data_mongodb" -> "[root] aws_security_group.private_data_mongodb (expand)"
+		"[root] aws_security_group.private_data_mssql (expand)" -> "[root] aws_vpc.main"
+		"[root] aws_security_group.private_data_mssql" -> "[root] aws_security_group.private_data_mssql (expand)"
+		"[root] aws_security_group.private_data_mysql (expand)" -> "[root] aws_vpc.main"
+		"[root] aws_security_group.private_data_mysql" -> "[root] aws_security_group.private_data_mysql (expand)"
+		"[root] aws_security_group.private_data_oracle (expand)" -> "[root] aws_vpc.main"
+		"[root] aws_security_group.private_data_oracle" -> "[root] aws_security_group.private_data_oracle (expand)"
+		"[root] aws_security_group.private_data_postgresql (expand)" -> "[root] aws_vpc.main"
+		"[root] aws_security_group.private_data_postgresql" -> "[root] aws_security_group.private_data_postgresql (expand)"
+		"[root] aws_security_group.private_data_redis (expand)" -> "[root] aws_vpc.main"
+		"[root] aws_security_group.private_data_redis" -> "[root] aws_security_group.private_data_redis (expand)"
+		"[root] aws_security_group.public_alb (expand)" -> "[root] aws_vpc.main"
+		"[root] aws_security_group.public_alb" -> "[root] aws_security_group.public_alb (expand)"
+		"[root] aws_security_group.public_app (expand)" -> "[root] aws_vpc.main"
+		"[root] aws_security_group.public_app" -> "[root] aws_security_group.public_app (expand)"
+		"[root] aws_subnet.private_app_a (expand)" -> "[root] aws_vpc.main"
+		"[root] aws_subnet.private_app_a" -> "[root] aws_subnet.private_app_a (expand)"
+		"[root] aws_subnet.private_app_b (expand)" -> "[root] aws_vpc.main"
+		"[root] aws_subnet.private_app_b" -> "[root] aws_subnet.private_app_b (expand)"
+		"[root] aws_subnet.private_app_c (expand)" -> "[root] aws_vpc.main"
+		"[root] aws_subnet.private_app_c" -> "[root] aws_subnet.private_app_c (expand)"
+		"[root] aws_subnet.private_data_a (expand)" -> "[root] aws_vpc.main"
+		"[root] aws_subnet.private_data_a" -> "[root] aws_subnet.private_data_a (expand)"
+		"[root] aws_subnet.private_data_b (expand)" -> "[root] aws_vpc.main"
+		"[root] aws_subnet.private_data_b" -> "[root] aws_subnet.private_data_b (expand)"
+		"[root] aws_subnet.private_data_c (expand)" -> "[root] aws_vpc.main"
+		"[root] aws_subnet.private_data_c" -> "[root] aws_subnet.private_data_c (expand)"
+		"[root] aws_subnet.public_app_a (expand)" -> "[root] aws_vpc.main"
+		"[root] aws_subnet.public_app_a" -> "[root] aws_subnet.public_app_a (expand)"
+		"[root] aws_subnet.public_app_b (expand)" -> "[root] aws_vpc.main"
+		"[root] aws_subnet.public_app_b" -> "[root] aws_subnet.public_app_b (expand)"
+		"[root] aws_subnet.public_app_c (expand)" -> "[root] aws_vpc.main"
+		"[root] aws_subnet.public_app_c" -> "[root] aws_subnet.public_app_c (expand)"
+		"[root] aws_vpc.main (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] aws_vpc.main" -> "[root] aws_vpc.main (expand)"
+		"[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_bastion (expand)" -> "[root] aws_security_group.bastion_host"
+		"[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_bastion" -> "[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_bastion (expand)"
+		"[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_private_app (expand)" -> "[root] aws_security_group.private_app"
+		"[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_private_app" -> "[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_private_app (expand)"
+		"[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_private_asg (expand)" -> "[root] aws_security_group.private_asg"
+		"[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_private_asg" -> "[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_private_asg (expand)"
+		"[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_public_alb (expand)" -> "[root] aws_security_group.public_alb"
+		"[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_public_alb" -> "[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_public_alb (expand)"
+		"[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_public_app (expand)" -> "[root] aws_security_group.public_app"
+		"[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_public_app" -> "[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_public_app (expand)"
+		"[root] aws_vpc_security_group_egress_rule.allow_internal_outbound_ipv4_mongodb (expand)" -> "[root] aws_security_group.private_data_mongodb"
+		"[root] aws_vpc_security_group_egress_rule.allow_internal_outbound_ipv4_mongodb" -> "[root] aws_vpc_security_group_egress_rule.allow_internal_outbound_ipv4_mongodb (expand)"
+		"[root] aws_vpc_security_group_egress_rule.allow_internal_outbound_ipv4_mssql (expand)" -> "[root] aws_security_group.private_data_mssql"
+		"[root] aws_vpc_security_group_egress_rule.allow_internal_outbound_ipv4_mssql" -> "[root] aws_vpc_security_group_egress_rule.allow_internal_outbound_ipv4_mssql (expand)"
+		"[root] aws_vpc_security_group_egress_rule.allow_internal_outbound_ipv4_mysql (expand)" -> "[root] aws_security_group.private_data_mysql"
+		"[root] aws_vpc_security_group_egress_rule.allow_internal_outbound_ipv4_mysql" -> "[root] aws_vpc_security_group_egress_rule.allow_internal_outbound_ipv4_mysql (expand)"
+		"[root] aws_vpc_security_group_egress_rule.allow_internal_outbound_ipv4_oracle (expand)" -> "[root] aws_security_group.private_data_oracle"
+		"[root] aws_vpc_security_group_egress_rule.allow_internal_outbound_ipv4_oracle" -> "[root] aws_vpc_security_group_egress_rule.allow_internal_outbound_ipv4_oracle (expand)"
+		"[root] aws_vpc_security_group_egress_rule.allow_internal_outbound_ipv4_postgresql (expand)" -> "[root] aws_security_group.private_data_postgresql"
+		"[root] aws_vpc_security_group_egress_rule.allow_internal_outbound_ipv4_postgresql" -> "[root] aws_vpc_security_group_egress_rule.allow_internal_outbound_ipv4_postgresql (expand)"
+		"[root] aws_vpc_security_group_egress_rule.allow_internal_outbound_ipv4_redis (expand)" -> "[root] aws_security_group.private_data_redis"
+		"[root] aws_vpc_security_group_egress_rule.allow_internal_outbound_ipv4_redis" -> "[root] aws_vpc_security_group_egress_rule.allow_internal_outbound_ipv4_redis (expand)"
+		"[root] aws_vpc_security_group_ingress_rule.allow_all_inbound_http_ipv4_public_alb (expand)" -> "[root] aws_security_group.public_alb"
+		"[root] aws_vpc_security_group_ingress_rule.allow_all_inbound_http_ipv4_public_alb" -> "[root] aws_vpc_security_group_ingress_rule.allow_all_inbound_http_ipv4_public_alb (expand)"
+		"[root] aws_vpc_security_group_ingress_rule.allow_all_inbound_http_ipv4_public_app (expand)" -> "[root] aws_security_group.public_app"
+		"[root] aws_vpc_security_group_ingress_rule.allow_all_inbound_http_ipv4_public_app" -> "[root] aws_vpc_security_group_ingress_rule.allow_all_inbound_http_ipv4_public_app (expand)"
+		"[root] aws_vpc_security_group_ingress_rule.allow_all_inbound_https_ipv4_public_alb (expand)" -> "[root] aws_security_group.public_alb"
+		"[root] aws_vpc_security_group_ingress_rule.allow_all_inbound_https_ipv4_public_alb" -> "[root] aws_vpc_security_group_ingress_rule.allow_all_inbound_https_ipv4_public_alb (expand)"
+		"[root] aws_vpc_security_group_ingress_rule.allow_all_inbound_https_ipv4_public_app (expand)" -> "[root] aws_security_group.public_app"
+		"[root] aws_vpc_security_group_ingress_rule.allow_all_inbound_https_ipv4_public_app" -> "[root] aws_vpc_security_group_ingress_rule.allow_all_inbound_https_ipv4_public_app (expand)"
+		"[root] aws_vpc_security_group_ingress_rule.allow_all_inbound_rdp_ipv4_bastion (expand)" -> "[root] aws_security_group.bastion_host"
+		"[root] aws_vpc_security_group_ingress_rule.allow_all_inbound_rdp_ipv4_bastion" -> "[root] aws_vpc_security_group_ingress_rule.allow_all_inbound_rdp_ipv4_bastion (expand)"
+		"[root] aws_vpc_security_group_ingress_rule.allow_all_inbound_ssh_ipv4_public_app (expand)" -> "[root] aws_security_group.public_app"
+		"[root] aws_vpc_security_group_ingress_rule.allow_all_inbound_ssh_ipv4_public_app" -> "[root] aws_vpc_security_group_ingress_rule.allow_all_inbound_ssh_ipv4_public_app (expand)"
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_http_from_public_alb_sg (expand)" -> "[root] aws_security_group.private_asg"
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_http_from_public_alb_sg (expand)" -> "[root] aws_security_group.public_alb"
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_http_from_public_alb_sg" -> "[root] aws_vpc_security_group_ingress_rule.allow_inbound_http_from_public_alb_sg (expand)"
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_http_from_public_app_sg (expand)" -> "[root] aws_security_group.private_app"
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_http_from_public_app_sg (expand)" -> "[root] aws_security_group.public_app"
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_http_from_public_app_sg" -> "[root] aws_vpc_security_group_ingress_rule.allow_inbound_http_from_public_app_sg (expand)"
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_https_from_public_alb_sg (expand)" -> "[root] aws_security_group.private_asg"
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_https_from_public_alb_sg" -> "[root] aws_vpc_security_group_ingress_rule.allow_inbound_https_from_public_alb_sg (expand)"
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_https_from_public_app_sg (expand)" -> "[root] aws_security_group.private_app"
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_https_from_public_app_sg" -> "[root] aws_vpc_security_group_ingress_rule.allow_inbound_https_from_public_app_sg (expand)"
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_mongodb_from_private_app_sg (expand)" -> "[root] aws_security_group.private_app"
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_mongodb_from_private_app_sg (expand)" -> "[root] aws_security_group.private_data_mongodb"
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_mongodb_from_private_app_sg" -> "[root] aws_vpc_security_group_ingress_rule.allow_inbound_mongodb_from_private_app_sg (expand)"
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_mssql_from_private_app_sg (expand)" -> "[root] aws_security_group.private_app"
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_mssql_from_private_app_sg (expand)" -> "[root] aws_security_group.private_data_mssql"
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_mssql_from_private_app_sg" -> "[root] aws_vpc_security_group_ingress_rule.allow_inbound_mssql_from_private_app_sg (expand)"
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_mysql_from_private_app_sg (expand)" -> "[root] aws_security_group.private_app"
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_mysql_from_private_app_sg (expand)" -> "[root] aws_security_group.private_data_mysql"
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_mysql_from_private_app_sg" -> "[root] aws_vpc_security_group_ingress_rule.allow_inbound_mysql_from_private_app_sg (expand)"
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_oracle_from_private_app_sg (expand)" -> "[root] aws_security_group.private_app"
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_oracle_from_private_app_sg (expand)" -> "[root] aws_security_group.private_data_oracle"
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_oracle_from_private_app_sg" -> "[root] aws_vpc_security_group_ingress_rule.allow_inbound_oracle_from_private_app_sg (expand)"
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_postgresql_from_private_app_sg (expand)" -> "[root] aws_security_group.private_app"
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_postgresql_from_private_app_sg (expand)" -> "[root] aws_security_group.private_data_postgresql"
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_postgresql_from_private_app_sg" -> "[root] aws_vpc_security_group_ingress_rule.allow_inbound_postgresql_from_private_app_sg (expand)"
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_redis_from_private_app_sg (expand)" -> "[root] aws_security_group.private_app"
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_redis_from_private_app_sg (expand)" -> "[root] aws_security_group.private_data_redis"
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_redis_from_private_app_sg" -> "[root] aws_vpc_security_group_ingress_rule.allow_inbound_redis_from_private_app_sg (expand)"
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_ssh_from_public_app_sg (expand)" -> "[root] aws_security_group.private_app"
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_ssh_from_public_app_sg (expand)" -> "[root] aws_security_group.public_app"
+		"[root] aws_vpc_security_group_ingress_rule.allow_inbound_ssh_from_public_app_sg" -> "[root] aws_vpc_security_group_ingress_rule.allow_inbound_ssh_from_public_app_sg (expand)"
+		"[root] data.aws_ami.amazon_linux_2023 (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] data.aws_ami.microsoft_windows_server_2025 (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
+		"[root] output.Bastion_Host_Name (expand)" -> "[root] aws_instance.bastion_host"
+		"[root] output.Bastion_Host_Private_IP (expand)" -> "[root] aws_instance.bastion_host"
+		"[root] output.Bastion_Host_Public_IP (expand)" -> "[root] aws_instance.bastion_host"
+		"[root] output.Bastion_Host_Subnet (expand)" -> "[root] aws_instance.bastion_host"
+		"[root] output.Bastion_Host_URL (expand)" -> "[root] aws_instance.bastion_host"
+		"[root] output.Private_Client_A_Name (expand)" -> "[root] aws_instance.private_client_a"
+		"[root] output.Private_Client_A_Private_IP (expand)" -> "[root] aws_instance.private_client_a"
+		"[root] output.Private_Client_A_Subnet (expand)" -> "[root] aws_instance.private_client_a"
+		"[root] output.Private_Client_B_Name (expand)" -> "[root] aws_instance.private_client_b"
+		"[root] output.Private_Client_B_Private_IP (expand)" -> "[root] aws_instance.private_client_b"
+		"[root] output.Private_Client_B_Subnet (expand)" -> "[root] aws_instance.private_client_b"
+		"[root] output.Private_Client_C_Name (expand)" -> "[root] aws_instance.private_client_c"
+		"[root] output.Private_Client_C_Private_IP (expand)" -> "[root] aws_instance.private_client_c"
+		"[root] output.Private_Client_C_Subnet (expand)" -> "[root] aws_instance.private_client_c"
+		"[root] output.Public_Client_A_Name (expand)" -> "[root] aws_instance.public_client_a"
+		"[root] output.Public_Client_A_Private_IP (expand)" -> "[root] aws_instance.public_client_a"
+		"[root] output.Public_Client_A_Public_IP (expand)" -> "[root] aws_instance.public_client_a"
+		"[root] output.Public_Client_A_Subnet (expand)" -> "[root] aws_instance.public_client_a"
+		"[root] output.Public_Client_A_URL (expand)" -> "[root] aws_instance.public_client_a"
+		"[root] output.vpc_id (expand)" -> "[root] aws_vpc.main"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_autoscaling_group.private_client_mixed_asg"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_instance.bastion_host"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_instance.private_client_a"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_instance.private_client_b"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_instance.private_client_c"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_instance.public_client_a"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_lb_listener.public_app_lb_01"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_route_table_association.private_app_a"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_route_table_association.private_app_b"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_route_table_association.private_app_c"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_route_table_association.private_data_a"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_route_table_association.private_data_b"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_route_table_association.private_data_c"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_route_table_association.public_app_a"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_route_table_association.public_app_b"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_route_table_association.public_app_c"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_bastion"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_private_app"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_private_asg"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_public_alb"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_public_app"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_vpc_security_group_egress_rule.allow_internal_outbound_ipv4_mongodb"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_vpc_security_group_egress_rule.allow_internal_outbound_ipv4_mssql"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_vpc_security_group_egress_rule.allow_internal_outbound_ipv4_mysql"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_vpc_security_group_egress_rule.allow_internal_outbound_ipv4_oracle"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_vpc_security_group_egress_rule.allow_internal_outbound_ipv4_postgresql"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_vpc_security_group_egress_rule.allow_internal_outbound_ipv4_redis"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_vpc_security_group_ingress_rule.allow_all_inbound_http_ipv4_public_alb"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_vpc_security_group_ingress_rule.allow_all_inbound_http_ipv4_public_app"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_vpc_security_group_ingress_rule.allow_all_inbound_https_ipv4_public_alb"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_vpc_security_group_ingress_rule.allow_all_inbound_https_ipv4_public_app"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_vpc_security_group_ingress_rule.allow_all_inbound_rdp_ipv4_bastion"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_vpc_security_group_ingress_rule.allow_all_inbound_ssh_ipv4_public_app"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_vpc_security_group_ingress_rule.allow_inbound_http_from_public_alb_sg"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_vpc_security_group_ingress_rule.allow_inbound_http_from_public_app_sg"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_vpc_security_group_ingress_rule.allow_inbound_https_from_public_alb_sg"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_vpc_security_group_ingress_rule.allow_inbound_https_from_public_app_sg"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_vpc_security_group_ingress_rule.allow_inbound_mongodb_from_private_app_sg"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_vpc_security_group_ingress_rule.allow_inbound_mssql_from_private_app_sg"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_vpc_security_group_ingress_rule.allow_inbound_mysql_from_private_app_sg"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_vpc_security_group_ingress_rule.allow_inbound_oracle_from_private_app_sg"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_vpc_security_group_ingress_rule.allow_inbound_postgresql_from_private_app_sg"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_vpc_security_group_ingress_rule.allow_inbound_redis_from_private_app_sg"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_vpc_security_group_ingress_rule.allow_inbound_ssh_from_public_app_sg"
+		"[root] root" -> "[root] output.Bastion_Host_Name (expand)"
+		"[root] root" -> "[root] output.Bastion_Host_Private_IP (expand)"
+		"[root] root" -> "[root] output.Bastion_Host_Public_IP (expand)"
+		"[root] root" -> "[root] output.Bastion_Host_Subnet (expand)"
+		"[root] root" -> "[root] output.Bastion_Host_URL (expand)"
+		"[root] root" -> "[root] output.Private_Client_A_Name (expand)"
+		"[root] root" -> "[root] output.Private_Client_A_Private_IP (expand)"
+		"[root] root" -> "[root] output.Private_Client_A_Subnet (expand)"
+		"[root] root" -> "[root] output.Private_Client_B_Name (expand)"
+		"[root] root" -> "[root] output.Private_Client_B_Private_IP (expand)"
+		"[root] root" -> "[root] output.Private_Client_B_Subnet (expand)"
+		"[root] root" -> "[root] output.Private_Client_C_Name (expand)"
+		"[root] root" -> "[root] output.Private_Client_C_Private_IP (expand)"
+		"[root] root" -> "[root] output.Private_Client_C_Subnet (expand)"
+		"[root] root" -> "[root] output.Public_Client_A_Name (expand)"
+		"[root] root" -> "[root] output.Public_Client_A_Private_IP (expand)"
+		"[root] root" -> "[root] output.Public_Client_A_Public_IP (expand)"
+		"[root] root" -> "[root] output.Public_Client_A_Subnet (expand)"
+		"[root] root" -> "[root] output.Public_Client_A_URL (expand)"
+		"[root] root" -> "[root] output.vpc_id (expand)"
+		"[root] root" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+	}
+}
