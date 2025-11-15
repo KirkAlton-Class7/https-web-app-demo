@@ -34,6 +34,8 @@ resource "aws_lb_listener" "public_app_lb_01" {
 
   default_action {
     type             = "forward"
-    target_group_arn = aws_lb_target_group.private_mixed_asg_tg.arn
+    target_group_arn = aws_lb_target_group.private_asg_tg.arn
+    #target_group_arn = aws_lb_target_group.private_mixed_asg_tg.arn # use with mixed AST
+
   }
 }

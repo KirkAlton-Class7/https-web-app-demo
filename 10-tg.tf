@@ -1,12 +1,12 @@
 #Target Group Configurations
 
-#Private Client Mixed ASG Target Group
-resource "aws_lb_target_group" "private_mixed_asg_tg" {
+#Private Client ASG Target Group
+resource "aws_lb_target_group" "private_asg_tg" {
     name     = "private-client-mixed-asg-tg"
     target_type = "instance"
     port     = 80
     protocol = "HTTP" # Target group must use HTTP or HTTPS protocol if attached to an Application Load Balancer (ALB only supports Layer 7; HTTP and HTTPS).
-    protocol_version = "HTTP1" # Required when protocol is HTTP or HTTPS. Default is HTTP1 but you can specify GRPC or HTTP2 if needed.
+    #protocol_version = "HTTP1" # Required when protocol is HTTP or HTTPS. Default is HTTP1 but you can specify GRPC or HTTP2 if needed.
     vpc_id   = aws_vpc.main.id
 
     load_balancing_algorithm_type = "round_robin"
@@ -24,12 +24,3 @@ resource "aws_lb_target_group" "private_mixed_asg_tg" {
         unhealthy_threshold = 3
     }
 }
-
-# OVERRIDES FOR LAUNCH TEMPLATE NOT WORKING AS EXPECTED.
-# AP NORTHEAST A SHOWS SCRIPT A (T2.NANO)
-
-# AP NORTHEAST B SHOWS SCRIPT C (T3.NANO) PROBLEM. SKIPPED ONE.
-# AP NORTHEAST C SHOWS SCRIPT C (T3.NANO)
-# NAMES BOTH PRIVATE CLIENT C AND LAUNCHES FROM SAME TEMPLATE
-
-# TEMPLATE USING T2.MICRO (TEMPLATE FOR CLIENT B) WAS NEVER USED

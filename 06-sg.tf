@@ -28,6 +28,7 @@ resource "aws_vpc_security_group_ingress_rule" "allow_all_inbound_https_ipv4_pub
 }
 
 # SG Rule: Allow all Outbound IPv4 for Public ALB SG
+# IS THIS NEEDED? I DON'T THINK LOAD BALANCERS HANDLE OUTBOUND TRAFFIC.
 resource "aws_vpc_security_group_egress_rule" "allow_all_outbound_ipv4_public_alb" {
   security_group_id = aws_security_group.public_alb.id
   cidr_ipv4         = "0.0.0.0/0"
@@ -138,11 +139,21 @@ resource "aws_vpc_security_group_ingress_rule" "allow_inbound_http_from_public_a
 # SG Rule: Allow HTTPS Inbound only from Public ALB SG
 resource "aws_vpc_security_group_ingress_rule" "allow_inbound_https_from_public_alb_sg" {
   security_group_id = aws_security_group.private_asg.id
-  cidr_ipv4         = "0.0.0.0/0"
   from_port         = 443
   ip_protocol       = "tcp"
   to_port           = 443
+  referenced_security_group_id = aws_security_group.public_alb.id
 }
+
+# SG Rule: Allow SSH Inbound only from Public App SG
+resource "aws_vpc_security_group_ingress_rule" "allow_inbound_ssh_from_public_alb_sg" {
+  security_group_id = aws_security_group.private_asg.id
+  from_port         = 22
+  ip_protocol       = "tcp"
+  to_port           = 22
+  referenced_security_group_id = aws_security_group.public_alb.id
+}
+
 
 # SG Rule: Allow all Outbound IPv4 for Private ASG SG
 resource "aws_vpc_security_group_egress_rule" "allow_all_outbound_ipv4_private_asg" {
