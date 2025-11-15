@@ -2,7 +2,7 @@
 
 #Private Client ASG Target Group
 resource "aws_lb_target_group" "private_asg_tg" {
-    name     = "private-client-mixed-asg-tg"
+    name     = "private-client-asg-tg"
     target_type = "instance"
     port     = 80
     protocol = "HTTP" # Target group must use HTTP or HTTPS protocol if attached to an Application Load Balancer (ALB only supports Layer 7; HTTP and HTTPS).

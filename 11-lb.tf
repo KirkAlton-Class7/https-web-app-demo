@@ -23,7 +23,7 @@ resource "aws_lb" "public_app_lb_01" {
 }
 
 
-# Public Application Load Balancer 01 - Listener (Forwards to Mixed ASG)
+# Public Application Load Balancer 01 - Listener (Forwards to ASG)
 
 resource "aws_lb_listener" "public_app_lb_01" {
   load_balancer_arn = aws_lb.public_app_lb_01.arn
@@ -35,7 +35,5 @@ resource "aws_lb_listener" "public_app_lb_01" {
   default_action {
     type             = "forward"
     target_group_arn = aws_lb_target_group.private_asg_tg.arn
-    #target_group_arn = aws_lb_target_group.private_mixed_asg_tg.arn # use with mixed AST
-
   }
 }
