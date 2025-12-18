@@ -1,3 +1,4 @@
+# NOTES PENDING
 ## Clone and launch in Terraform (deploys in ap-northeast-3)
 ## Replace backend with your own source.
 ```shell
