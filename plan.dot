@@ -47,7 +47,6 @@ digraph {
 		"[root] aws_subnet.public_app_c (expand)" [label = "aws_subnet.public_app_c", shape = "box"]
 		"[root] aws_vpc.main (expand)" [label = "aws_vpc.main", shape = "box"]
 		"[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_bastion (expand)" [label = "aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_bastion", shape = "box"]
-		"[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_public_alb" [label = "aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_public_alb", shape = "box"]
 		"[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_public_alb (expand)" [label = "aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_public_alb", shape = "box"]
 		"[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_public_app (expand)" [label = "aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_public_app", shape = "box"]
 		"[root] aws_vpc_security_group_egress_rule.allow_http_outbound_ipv4_private_app (expand)" [label = "aws_vpc_security_group_egress_rule.allow_http_outbound_ipv4_private_app", shape = "box"]
@@ -141,7 +140,6 @@ digraph {
 		"[root] aws_vpc.main (expand)" -> "[root] provider[\"registry.terraform.io/hashicorp/aws\"]"
 		"[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_bastion (expand)" -> "[root] aws_security_group.bastion_host (expand)"
 		"[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_public_alb (expand)" -> "[root] aws_security_group.public_alb (expand)"
-		"[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_public_alb" -> "[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_public_alb (expand)"
 		"[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_public_app (expand)" -> "[root] aws_security_group.public_app (expand)"
 		"[root] aws_vpc_security_group_egress_rule.allow_http_outbound_ipv4_private_app (expand)" -> "[root] aws_security_group.private_app (expand)"
 		"[root] aws_vpc_security_group_egress_rule.allow_http_outbound_ipv4_private_asg (expand)" -> "[root] aws_security_group.private_asg (expand)"
@@ -193,7 +191,7 @@ digraph {
 		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_route_table_association.public_app_b (expand)"
 		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_route_table_association.public_app_c (expand)"
 		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_bastion (expand)"
-		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_public_alb"
+		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_public_alb (expand)"
 		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_vpc_security_group_egress_rule.allow_all_outbound_ipv4_public_app (expand)"
 		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_vpc_security_group_egress_rule.allow_http_outbound_ipv4_private_app (expand)"
 		"[root] provider[\"registry.terraform.io/hashicorp/aws\"] (close)" -> "[root] aws_vpc_security_group_egress_rule.allow_http_outbound_ipv4_private_asg (expand)"
