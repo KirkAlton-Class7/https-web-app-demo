@@ -25,7 +25,7 @@ provider "aws" {
 terraform {
   backend "s3" {
     bucket = "kirkdevsecops-terraform-state"
-    key = "class7/terraform/dev/kirk-vpc-demo/terraform.tfstate"
+    key = "class7/terraform/dev/kirk-https-web-app-demo/terraform.tfstate"
     region = "us-west-2"
   }
 }
